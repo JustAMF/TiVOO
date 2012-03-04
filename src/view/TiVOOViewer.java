@@ -5,7 +5,6 @@ import controller.TivooSystem;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
@@ -35,7 +34,6 @@ public class TiVOOViewer extends JFrame {
 	private JTextField myMessage;
 	private JEditorPane pane;
 	private JPanel panel;
-	private JTextField myInstruction;
 	private String myString;
 
 	protected static JFileChooser ourChooser = new JFileChooser(System
@@ -64,14 +62,6 @@ public class TiVOOViewer extends JFrame {
 		myMessage = new JTextField(30);
 		p.setBorder(BorderFactory.createTitledBorder("message"));
 		p.add(myMessage, BorderLayout.CENTER);
-		return p;
-	}
-
-	private JPanel makeInstruction() {
-		JPanel p = new JPanel(new BorderLayout());
-		myInstruction = new JTextField(30);
-		p.setBorder(BorderFactory.createTitledBorder("Instruction"));
-		p.add(myInstruction, BorderLayout.CENTER);
 		return p;
 	}
 
@@ -299,17 +289,4 @@ public class TiVOOViewer extends JFrame {
 	public void showMessage(String s) {
 		myMessage.setText(s);
 	}
-
-	public void showInstruction(String s) {
-		myInstruction.setText(s);
-	}
-
-	public static void main(String[] args) {
-
-		TiVOOViewer tvv = new TiVOOViewer("TiVOO");
-
-		tvv.setModel(new TivooSystem());
-
-	}
-
 }
