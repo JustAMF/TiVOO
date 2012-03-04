@@ -4,6 +4,9 @@ Description:
 
 This is a program to input XML calendars, filter them and then preview or output a HTML page.
 
+Please run the main class to run the program! Have fun!
+
+
 GUI instruction (Guide)
 
 1. Load one or more XML files from your local disk (using the File -- Load file option on the menu).
